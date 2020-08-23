@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         width: '100%',
         height: '100px',
-        padding: '0 0px 0 15px',
+        padding: '0 0px 0 0px',
         display: 'fixed',
         background: 'linear-gradient(90deg, #F76C6C 0%, rgba(255, 153, 153, 1) 80%)',
     },
