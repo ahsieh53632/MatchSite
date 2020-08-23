@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto',
         display: 'block',
         height: '60vh',
-        width: '100vw',
+        width: '90vw',
         objectFit: 'cover',
-        objectPosition: '15% 0'
+        objectPosition: '10% 0%'
     },
 
     cell: {
