@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     width: '100%',
     height: '100%',
-    overflow: 'hidden',
   },
   div: {
     boxSizing: 'border-box',
@@ -44,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '30px',
     boxShadow: '0 12.5px 100px -10px rgba(90, 90, 90, 0.4), 0 10px 10px -10px rgba(90, 90, 90, 0.3)',
     objectFit: 'cover',
-    position: 'relative',
     color: "white",
     display: 'flex',
     objectPosition: '15% 0',
