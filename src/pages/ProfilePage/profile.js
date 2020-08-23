@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: 'rgba(255, 153, 153, .5)',
           outline: '1px solid slategrey'
         },
+        'body': {
+            margin: '0',
+            padding: '0 0 0 0',
+        },
       },
     root: {
         position: 'fixed',
@@ -127,12 +131,12 @@ const Profile = ({location}) => {
     }
     return (
         <div className={classes.root}>
-            <header>
+            <head>
                 <meta
                 name="viewport"
                 content="minimum-scale=1, initial-scale=1, width=device-width"
                 />
-                </header>
+            </head>
             <Card className={classes.paper}>
                 <Grid container direction={'column'} spacing={3} justify="center">
                     <Grid item xs={12} className={classes.cell}>  

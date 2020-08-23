@@ -21,6 +21,12 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = theme => ({
+    '@global': {
+        'body': {
+          margin: '0',
+          padding: '0 0 0 0',
+        },
+      },
     container: {
         width: '100%',
         height: '100%',
@@ -118,7 +124,7 @@ class MainPage extends React.Component {
     render() {
         const {classes, userName, ...rest} = this.props
         return (
-            <div>
+            <div className={classes.container}>
                 <header>
                 <meta
                 name="viewport"
