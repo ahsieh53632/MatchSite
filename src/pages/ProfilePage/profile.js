@@ -32,10 +32,11 @@ const useStyles = makeStyles((theme) => ({
         'body': {
             margin: '0',
             padding: '0 0 0 0',
+            backgroundColor: '#E5F8FF',
         },
       },
     root: {
-        position: 'fixed',
+        justify: 'center',
         width: '100%',
         height: '100%',
         margin: 'auto',
@@ -45,10 +46,10 @@ const useStyles = makeStyles((theme) => ({
     },
     
     paper: {
-        padding: theme.spacing(2),
+        padding: '5px 15px 0 15px',
         margin: 'auto',
-        width: '90vw',
-        height: '95vh',
+        width: '85vw',
+        height: '100vh',
         backgroundColor: 'rgba(255,255,255, .8)',
         overflowY: 'scroll',
         overflowX: 'hidden',
@@ -131,7 +132,7 @@ const Profile = ({location}) => {
             }
     }
     return (
-        <div className={classes.root}>
+        <div>
             <head>
                 <meta
                 name="viewport"
@@ -172,14 +173,14 @@ const Profile = ({location}) => {
                             </TextField>
                         </FormControl>
                     </Grid>
-                    
-                </Grid>
-                <Grid container>
+                    <Grid container>
                     <Button onClick={() => update()}> Update </Button>
                     <Button onClick={(e) => navigate('/Main', {
                                   state: {username: userName,},
                                 })}> MainPage </Button>
+                    </Grid>
                 </Grid>
+                
             </Card>
         </div>
 
