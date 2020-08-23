@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         height: '60vh',
         width: '90vw',
         objectFit: 'cover',
-        objectPosition: '10% 0%'
+        objectPosition: '0% 0%'
     },
 
     cell: {
@@ -127,6 +127,12 @@ const Profile = ({location}) => {
     }
     return (
         <div className={classes.root}>
+            <header>
+                <meta
+                name="viewport"
+                content="minimum-scale=1, initial-scale=1, width=device-width"
+                />
+                </header>
             <Card className={classes.paper}>
                 <Grid container direction={'column'} spacing={3} justify="center">
                     <Grid item xs={12} className={classes.cell}>  

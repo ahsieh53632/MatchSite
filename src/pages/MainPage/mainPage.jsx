@@ -119,6 +119,12 @@ class MainPage extends React.Component {
         const {classes, userName, ...rest} = this.props
         return (
             <div>
+                <header>
+                <meta
+                name="viewport"
+                content="minimum-scale=1, initial-scale=1, width=device-width"
+                />
+                </header>
             <SideBarHeader userName={userName}/>
             <div className={classes.container}>    
             <Grid container direction={'row'} alignItems="flex-start" spacing={0} className={classes.root}>

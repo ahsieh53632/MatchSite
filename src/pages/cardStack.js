@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     objectFit: 'cover',
     color: "white",
     display: 'flex',
-    objectPosition: '15% 0',
+    objectPosition: '0% 0',
   },
 
   text: {
