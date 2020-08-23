@@ -3,5 +3,5 @@ import SideBar from './MainPage/sideBar'
 import { navigate } from 'gatsby'
 
 export default ({location}) => (
-    <SideBar userName={location.state.username} />
+    <SideBar userName={(typeof window !== 'undefined') ? location.state.username : ""} />
 );

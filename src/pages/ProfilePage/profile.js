@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Profile = ({location}) => {
-    const userName = location.state.username;
+    const userName = (typeof window !== 'undefined') ? location.state.username : "";
     const [info, setInfo] = useState({name: '', age: 0, image_path: '', msg: ''});
     const [matching, setMatching] = useState(1);
     const [msg, setMsg] = useState();
