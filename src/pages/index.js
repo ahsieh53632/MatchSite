@@ -1,12 +1,8 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
-
+import SignIn from './login'
 const IndexPage = () => {
-  navigate('/login')
-
-  return(
-    <h1>hi</h1>
-  )
+  <SignIn />
 }
 
 export default IndexPage
