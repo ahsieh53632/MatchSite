@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: 'rgba(255, 153, 153, .5)',
           outline: '1px solid slategrey'
         },
+        '*::-webkit-overflow-scrolling': 'touch',
         'body': {
             margin: '0',
             padding: '0 0 0 0',

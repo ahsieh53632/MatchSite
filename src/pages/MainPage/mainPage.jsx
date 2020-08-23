@@ -24,8 +24,9 @@ const styles = theme => ({
     '@global': {
         'body': {
           margin: '0',
-          padding: '0 0 0 0',
+          padding: '0 0 0 0'
         },
+        '*::-webkit-overflow-scrolling': 'touch'
       },
     container: {
         width: '100%',

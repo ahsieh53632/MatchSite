@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: 'rgba(255, 153, 153, .5)',
           outline: '1px solid slategrey'
         },
+        '*::-webkit-overflow-scrolling': 'touch',
       },
     root: {
         position: 'relative',
@@ -95,7 +96,7 @@ const SideBar = (props) => {
 
 
     return(
-        <div>
+        <Container component="div" maxWidth="xs" justify="center" >
         <MatchedHeader userName={userName}/>
         <div className={classes.root} aria-label="main mailbox folders">
             <List component="nav" className={classes.listItem}>
@@ -119,7 +120,7 @@ const SideBar = (props) => {
                 </div>))}
             </List>
         </div>
-        </div>
+        </Container>
     );
 
 }

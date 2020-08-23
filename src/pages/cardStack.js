@@ -5,6 +5,7 @@ import { useGesture, useDrag } from 'react-use-gesture'
 import { makeStyles } from '@material-ui/styles'
 import { Grid, Typography } from '@material-ui/core'
 
+
 const useStyles = makeStyles((theme) => ({
   '@global': {
     'body': {
@@ -162,6 +163,12 @@ const Deck = (props) => {
   
   return (
     <div className={classes.root}>
+      <header>
+      <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width"
+      />
+      </header>
     <div>
     <Grid container>  
     {ps.map(({ x, y, rot, scale }, i) => (
