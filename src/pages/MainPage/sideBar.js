@@ -62,9 +62,6 @@ const useStyles = makeStyles((theme) => ({
         background: 'linear-gradient(90deg, #F76C6C 0%, rgba(255, 153, 153, 1) 80%)',
 }}));
 
-function handleClick(e, phone) {
-    alert(phone);
-}
 const SideBar = (props) => {
     const classes = useStyles();
     const {userName, ...rest} = props;
@@ -101,7 +98,7 @@ const SideBar = (props) => {
             <List component="nav" className={classes.listItem}>
                 {matched.map(({name, image_path, matchType, startTime, endTime, phone}) => (
                 <div key={name}>
-                <ListItem button onClick={(e) => {handleClick(e, phone)}} className={classes.listItem}>
+                <ListItem button component="a" href={"tel:// + phone"} className={classes.listItem}>
                     <ListItemIcon>
                         <img className={classes.avatar} src={"https://matchsiteimg.s3.ap-northeast-2.amazonaws.com/" + image_path}>
                         </img>
