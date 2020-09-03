@@ -26,7 +26,7 @@ const styles = theme => ({
           margin: '0',
           padding: '0 0 0 0'
         },
-        '*::-webkit-overflow-scrolling': 'touch'
+        
       },
     container: {
         width: '100%',
