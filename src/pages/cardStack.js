@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   '@global': {
     'body': {
       background: '#E5F8FF',
+      overflow: 'hidden',
     },
   },
   root: {

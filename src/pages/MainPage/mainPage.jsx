@@ -24,7 +24,8 @@ const styles = theme => ({
     '@global': {
         'body': {
           margin: '0',
-          padding: '0 0 0 0'
+          padding: '0 0 0 0',
+          overflow: 'hidden',
         },
         
       },
@@ -125,7 +126,7 @@ class MainPage extends React.Component {
     render() {
         const {classes, userName, ...rest} = this.props
         return (
-            <div className={classes.container}>
+            <div>
                 <header>
                 <meta
                 name="viewport"
