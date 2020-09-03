@@ -68,6 +68,7 @@ export default function SignUp() {
   const [matching, setMatching] = useState(1);
   const [img, setImg] = useState();
   const [f, setFn] = useState();
+  const [phoneNum, setPhone] = useState();
 
   function signUp(e) {
     e.preventDefault()
@@ -96,6 +97,7 @@ export default function SignUp() {
               "age": age,
               "matchingLoc": matching,
               "img": res.data.name,
+              "phone": phoneNum,
           })
           })
           .then(res => res.json())
@@ -173,6 +175,17 @@ export default function SignUp() {
                 label="age"
                 color='secondary'
                 onChange={(e) => setAge(Number(e.target.value))}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="phone"
+                label="phone number"
+                color='secondary'
+                onChange={(e) => setPhone(e.target.value)}
               />
             </Grid>
             <Grid item xs={5} sm={5}>

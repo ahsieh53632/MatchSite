@@ -38,15 +38,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center center',
     width: '35vh',
     maxWidth: '280px',
-    height: '75vh',
+    height: '80vh',
     maxHeight: '500px',
     willChange: 'transform',
     borderRadius: '30px',
     boxShadow: '0 12.5px 100px -10px rgba(90, 90, 90, 0.4), 0 10px 10px -10px rgba(90, 90, 90, 0.3)',
-    objectFit: 'cover',
     color: "white",
     display: 'flex',
-    objectPosition: '0% 0',
+    backgroundSize: '35vh 75vh',
   },
 
   text: {
@@ -67,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
-const from = i => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
+const from = i => ({ x: 0, y: i * -4, scale: .2, rot: -10 + Math.random() * 20, delay: i * 100 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
