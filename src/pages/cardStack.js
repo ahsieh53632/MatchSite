@@ -132,7 +132,7 @@ const Deck = (props) => {
     }
   }
   
-  useEffect(() => {
+    useEffect(() => {
     if (typeof window !== 'undefined' && gotData) {
       fetch('https://matchsitebackend.herokuapp.com/matching/get', {
           method: 'POST',

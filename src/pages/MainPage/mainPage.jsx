@@ -83,7 +83,9 @@ class MainPage extends React.Component {
                         type: data.data[0].matchType,
                         startTime: data.data[0].startTime.toString().slice(0,10),
                         endTime: data.data[0].endTime.toString().slice(0,10),
-                        loc: data.data[0].matchingLoc});
+                            loc: data.data[0].matchingLoc
+                        });
+                        console.log(this.state);
                     }
                     })
     }
@@ -91,16 +93,16 @@ class MainPage extends React.Component {
 
     handleTypeClick(e) {
         var x = e.currentTarget;
-        this.setState({typeEl: x, dateEl: null});
+        this.setState({...this.state, typeEl: x, dateEl: null});
     }
 
     handleDateClick(e) {
         var x = e.currentTarget;
-        this.setState({typeEl: null, dateEl: x});
+        this.setState({...this.state, typeEl: null, dateEl: x});
     }
 
     handleClose() {
-        this.setState({typeEl: null, dateEl: null});
+        this.setState({ ...this.state, typeEl: null, dateEl: null});
     }
 
     handleChangeDate(date) {
