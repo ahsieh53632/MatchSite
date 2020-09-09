@@ -15,7 +15,9 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-native-web`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

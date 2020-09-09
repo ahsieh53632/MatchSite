@@ -1,0 +1,11 @@
+.scrollable {
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .content {
+    background: white;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+  }
