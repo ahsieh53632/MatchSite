@@ -1,0 +1,1 @@
+{"ast":null,"code":"exports.polyfill=function(Component){return Component;};","map":{"version":3,"sources":["D:/MatchSite/.cache/react-lifecycles-compat.js"],"names":["exports","polyfill","Component"],"mappings":"AAAAA,OAAO,CAACC,QAAR,CAAmB,SAAAC,SAAS,QAAIA,CAAAA,SAAJ,EAA5B","sourcesContent":["exports.polyfill = Component => Component\n"]},"metadata":{},"sourceType":"script"}
