@@ -117,8 +117,10 @@ class MainPage extends React.Component {
             newDate = new Date(startDate.getTime() + 14 * 86400000 );
             startDate = new Date(startDate.getTime() + 7 * 86400000 );
         }
+
         const start = startDate.getFullYear() +'-'+ (startDate.getMonth() + 1) +'-'+ startDate.getDate();
-        const end = newDate.getFullYear() +'-'+ (newDate.getMonth() + 1) +'-'+ newDate.getDate();
+        const end = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate();
+        console.log('trying to set time to:', start, end);
         this.setState({...this.state, startTime: start,
              endTime: end, dateEl: null});
     }
