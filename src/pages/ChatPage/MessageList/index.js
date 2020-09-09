@@ -14,7 +14,7 @@ export default function MessageList(props) {
 
   const renderMessages = () => {
     let i = 0;
-    let messageCount = messages.length;
+    let messageCount = messages ? messages.length : 0;
     let tempMessages = [];
 
     while (i < messageCount) {
