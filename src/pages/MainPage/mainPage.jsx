@@ -76,7 +76,8 @@ class MainPage extends React.Component {
                 .then(res => res.json())
                 .then(data => {
                     if (data.success) {
-                    console.log('fetching matching time period');
+                        console.log('fetching matching time period', `user: ${userName}`);
+                        console.log('fetched', data.data);
                         this.setState({
                         ...this.state,
                         gotData: true,
@@ -85,12 +86,12 @@ class MainPage extends React.Component {
                         endTime: data.data[0].endTime.toString().slice(0,10),
                             loc: data.data[0].matchingLoc
                         });
-                        console.log(this.state);
+                        
                     }
                     })
     }
 
-
+    
     handleTypeClick(e) {
         var x = e.currentTarget;
         this.setState({...this.state, typeEl: x, dateEl: null});
@@ -132,7 +133,8 @@ class MainPage extends React.Component {
     }
 
     render() {
-        const {classes, userName, ...rest} = this.props
+        const { classes, userName, ...rest } = this.props
+        console.log(this.state, userName);
         return (
             <div>
                 <header>

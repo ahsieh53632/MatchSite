@@ -86,7 +86,7 @@ const MatchedHeader = (props) => {
             <div>
                 <img className={classes.avatar} src={"https://matchsiteimg.s3.ap-northeast-2.amazonaws.com/" + img} />
             </div>
-            <Typography className={classes.text}>Main Page</Typography>
+            <Typography className={classes.text}>Prev Page</Typography>
         </Button>
         <div>
             <IconButton color='inherit' className={classes.inButton} href={`tel://${phone}`}> 
