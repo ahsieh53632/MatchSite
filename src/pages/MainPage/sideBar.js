@@ -69,15 +69,13 @@ const handleClick = (user, to, phone) => {
       })
 }
 
-// TODO: REPLACE!
-const API = 'https://matchsitebackend.herokuapp.com/matched/get'
 const SideBar = (props) => {
     const classes = useStyles();
     const {userName, ...rest} = props;
     const [matched, setMatched] = useState([]);
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            fetch('http://localhost:3000/matched/get', {
+            fetch('https://matchsitebackend.herokuapp.com/matched/get', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
