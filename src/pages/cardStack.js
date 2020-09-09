@@ -74,7 +74,7 @@ const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg
 
 
 const Deck = (props) => {
-  const {startTime, endTime, type, userName, loc, ...rest} = props;
+  const {startTime, endTime, type, userName, loc, gotData, ...rest} = props;
   const classes = useStyles()
   const [gone] = useState(() => new Set())
   const [matching, setMatching] = useState([]);
@@ -133,7 +133,7 @@ const Deck = (props) => {
   }
   
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && gotData) {
       fetch('https://matchsitebackend.herokuapp.com/matching/get', {
           method: 'POST',
           headers: {
@@ -159,7 +159,7 @@ const Deck = (props) => {
                 setMatching([]);
               }
               })
-      }}, [type, startTime, endTime]);
+      }}, [type, startTime, endTime, gotData]);
   
   return (
     <div className={classes.root}>

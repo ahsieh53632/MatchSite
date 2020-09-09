@@ -56,6 +56,7 @@ class MainPage extends React.Component {
             type: '*',
             imgPath: '',
             loc: 1,
+            gotData: null,
         };
         this.matches = [];
     }
@@ -76,7 +77,10 @@ class MainPage extends React.Component {
                 .then(data => {
                     if (data.success) {
                     console.log('fetching matching time period');
-                    this.setState({...this.state, 
+                        this.setState({
+                        ...this.state,
+                        gotData: true,
+                        type: data.data[0].matchType,
                         startTime: data.data[0].startTime.toString().slice(0,10),
                         endTime: data.data[0].endTime.toString().slice(0,10),
                         loc: data.data[0].matchingLoc});
@@ -173,11 +177,13 @@ class MainPage extends React.Component {
                     </Menu>
                 </Grid>
                 <Grid item xs={12}>
-                    <CardStack type={this.state.type} 
+                    <CardStack type={this.state.type}
                         startTime={this.state.startTime}
                         endTime={this.state.endTime}
-                        userName= {userName}
-                        loc={this.state.loc}/>
+                        userName={userName}
+                        loc={this.state.loc}
+                        gotData={this.state.gotData}
+                    />
                 </Grid>
                 
             </Grid>
