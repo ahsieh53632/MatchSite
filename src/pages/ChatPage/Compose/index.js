@@ -36,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Compose(props) {
     const classes = useStyles();
-    const {onSend, ...rest} = props;
+    const {onSend, msgs, ...rest} = props;
     const [msg, setMsg] = React.useState();
+
     return (
       <div className={classes.compose}>
         <TextField
@@ -52,7 +53,7 @@ export default function Compose(props) {
 
         <Button
             color="primary"
-            onClick = {() => {if(msg !== '') { const send = msg; setMsg(''); onSend(send) }}}
+            onClick = {(e) => {if(msg !== '') { const send = msg; setMsg(''); onSend(e, send) }}}
         >
             Send
         </Button>
