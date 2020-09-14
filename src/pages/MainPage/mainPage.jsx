@@ -161,6 +161,12 @@ class MainPage extends React.Component {
                         <MenuItem onClick={() => this.handleChangeType("machong")}>打麻將</MenuItem>
                         <MenuItem onClick={() => this.handleChangeType("movie")}>看電影</MenuItem>
                         <MenuItem onClick={() => this.handleChangeType("eat")}>吃飯</MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("basketball")}>打籃球</MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("workout")}>健身</MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("nightview")}>看夜景</MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("book")}>文藝活動 </MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("bar")}>酒吧</MenuItem>
+                        <MenuItem onClick={() => this.handleChangeType("park")}>遊樂園</MenuItem>
                         <MenuItem onClick={() => this.handleChangeType("*")}>ALL</MenuItem>
                     </Menu>
                 </Grid>
