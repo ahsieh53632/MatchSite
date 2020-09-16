@@ -58,6 +58,7 @@ export default function MessageList(props) {
     socket.connect();
     socket.emit('join', user);
     socket.on('message', msg => {
+      if (msg.author != to) return;
       const nextState = messages.slice();
       nextState.push(msg);
       setMsgs(nextState);
@@ -95,7 +96,7 @@ export default function MessageList(props) {
         author: user,
         message: msg,
         timestamp: require('moment')().local().format("YYYY-MM-DD HH:mm:ss")
-    }});
+        }});
 
     setMsgs([...messages, {
         id: new Date().toLocaleDateString(),
